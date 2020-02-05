@@ -157,8 +157,10 @@ case $1 in
 		echo "   37)  SagemCom 88 series"
 		echo "   38)  Ferguson Ariva @Link 200"
 		echo "   39)  Pace HDS-7241 (kernel P0217 only)"
+		echo "  meelo                amlogoic"
+		echo "   40)  meelouno2"
 		echo
-		read -p "Select target (1-39)? ";;
+		read -p "Select target (1-40)? ";;
 esac
 
 case "$REPLY" in
@@ -201,6 +203,7 @@ case "$REPLY" in
 	37) BOXTYPE="sagemcom88";;
 	38) BOXTYPE="arivalink200";;
 	39) BOXTYPE="pace7241";;
+	40) BOXTYPE="meelouno2";;
 	 *) BOXTYPE="atevio7500";;
 esac
 echo "BOXTYPE=$BOXTYPE" >> config
