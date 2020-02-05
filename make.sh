@@ -19,7 +19,7 @@ if [ "$1" == -h ] || [ "$1" == --help ]; then
 	echo "-v or --verbose   : verbose build (very noisy!)"
 	echo "-q or --quiet     : quiet build, fastest, almost silent"
 	echo "-b or --batchmode : batch mode; do not become interactive"
-	echo "Parameter 1       : target system (1-40)"
+	echo "Parameter 1       : target system (1-39)"
 	echo "Parameter 2       : kernel (1-2)"
 	echo "Parameter 3       : optimization (1-5)"
 	echo "Parameter 4       : image (Enigma=1/2 Neutrino=3/4 Tvheadend=5 (1-5)"
@@ -206,6 +206,7 @@ case "$REPLY" in
 	40) BOXTYPE="meelouno2";;
 	 *) BOXTYPE="atevio7500";;
 esac
+echo "BOXARCH=$BOXARCH" >> config
 echo "BOXTYPE=$BOXTYPE" >> config
 
 ##############################################
